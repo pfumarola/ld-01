@@ -1,9 +1,9 @@
 package main
 
 import (
-	"log"
+	"github.com/pfumarola/ld-01/server"
 )
 
 func main() {
-	log.Print("Hello, world!")
+	server.Init()
 }

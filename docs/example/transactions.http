@@ -1,0 +1,22 @@
+###
+GET localhost:8080/transactions
+
+###
+POST localhost:8080/transactions
+
+{
+  id: 5
+}
+
+###
+GET localhost:8080/transactions/1
+
+###
+PUT localhost:8080/transactions/5
+
+{
+  name: "dsa"
+}
+
+###
+DELETE localhost:8080/transactions/5

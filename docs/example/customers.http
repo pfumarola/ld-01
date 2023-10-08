@@ -1,0 +1,22 @@
+###
+GET localhost:8080/customers
+
+###
+POST localhost:8080/customers
+
+{
+  id: 5
+}
+
+###
+GET localhost:8080/customers/1
+
+###
+PUT localhost:8080/customers/5
+
+{
+  name: "dsa"
+}
+
+###
+DELETE localhost:8080/customers/5

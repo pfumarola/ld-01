@@ -1,0 +1,22 @@
+###
+GET localhost:8080/authors
+
+###
+POST localhost:8080/authors
+
+{
+  id: 5
+}
+
+###
+GET localhost:8080/authors/1
+
+###
+PUT localhost:8080/authors/5
+
+{
+  name: "dsa"
+}
+
+###
+DELETE localhost:8080/authors/5
