@@ -1,9 +1,11 @@
 package server
 
 import (
-	"log"
+	"github.com/gin-gonic/gin"
 )
 
 func Init() {
-	log.Println("Starting server...")
+	app := gin.Default()
+	DefineRoutes(app)
+	app.Run()
 }

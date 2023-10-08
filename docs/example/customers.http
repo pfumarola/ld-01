@@ -1,22 +1,22 @@
 ###
-GET localhost:8080/customers
+GET http://localhost:8080/customers
 
 ###
-POST localhost:8080/customers
+POST http://localhost:8080/customers
 
 {
   id: 5
 }
 
 ###
-GET localhost:8080/customers/1
+GET http://localhost:8080/customers/1
 
 ###
-PUT localhost:8080/customers/5
+PUT http://localhost:8080/customers/5
 
 {
   name: "dsa"
 }
 
 ###
-DELETE localhost:8080/customers/5
+DELETE http://localhost:8080/customers/5

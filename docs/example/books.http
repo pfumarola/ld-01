@@ -1,22 +1,22 @@
 ###
-GET localhost:8080/books
+GET http://localhost:8080/books
 
 ###
-POST localhost:8080/books
+POST http://localhost:8080/books
 
 {
   id: 5
 }
 
 ###
-GET localhost:8080/books/1
+GET http://localhost:8080/books/1
 
 ###
-PUT localhost:8080/books/5
+PUT http://localhost:8080/books/5
 
 {
   name: "dsa"
 }
 
 ###
-DELETE localhost:8080/books/5
+DELETE http://localhost:8080/books/5
