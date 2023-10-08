@@ -1,0 +1,22 @@
+###
+GET localhost:8080/books
+
+###
+POST localhost:8080/books
+
+{
+  id: 5
+}
+
+###
+GET localhost:8080/books/1
+
+###
+PUT localhost:8080/books/5
+
+{
+  name: "dsa"
+}
+
+###
+DELETE localhost:8080/books/5
