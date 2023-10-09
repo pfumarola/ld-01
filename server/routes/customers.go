@@ -7,5 +7,15 @@ import (
 
 func CustomersRoutes(group *gin.RouterGroup) {
 	customers := new(controllers.CustomersController)
-	group.GET("/", customers.All)
+
+	group.GET("/", customers.FindAll)
+
+	group.GET("/:id", customers.FindOneByID)
+
+	group.PUT("/:id", customers.Update)
+
+	group.DELETE("/:id", customers.DeleteOneByID)
+
+	group.POST("/", customers.Save)
+
 }

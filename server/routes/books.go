@@ -7,5 +7,14 @@ import (
 
 func BooksRoutes(group *gin.RouterGroup) {
 	books := new(controllers.BooksController)
-	group.GET("/", books.All)
+
+	group.GET("/", books.FindAll)
+
+	group.GET("/:id", books.FindOneByID)
+
+	group.PUT("/:id", books.Update)
+
+	group.DELETE("/:id", books.DeleteOneByID)
+
+	group.POST("/", books.Save)
 }
