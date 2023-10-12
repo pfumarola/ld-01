@@ -5,7 +5,7 @@ import (
 )
 
 type Author struct {
-	AuthorID    uint      `gorm:"primary_key"`
+	AuthorID    uint      `json:"authorID" gorm:"primary_key"`
 	FirstName   string    `json:"firstName"`
 	LastName    string    `json:"lastNamw"`
 	DateOfBirth time.Time `json:"dateOfBirth"`

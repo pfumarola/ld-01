@@ -1,5 +1,10 @@
 package models
 
 type Book struct {
-	BookID uint `gorm:"primary_key"`
+	ISBN              string `gorm:"primary_key"`
+	Title             string `json:"title"`
+	AuthorID          uint   `json:"authorID"`
+	YearOfPublication string `json:"yearOfPublication"`
+	AvailableCopies   uint   `json:"availableCopies"`
+	TotalCopies       uint   `json:"totalCopies"`
 }

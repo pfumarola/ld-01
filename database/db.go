@@ -7,8 +7,6 @@ import (
 	"gorm.io/gorm"
 )
 
-var DB *gorm.DB
-
 func Init() *gorm.DB {
 	connStr := "postgres://postgres:lastingdynamics@localhost:5432/postgres?sslmode=disable"
 	sqlDB, _ := sql.Open("pgx", connStr)
