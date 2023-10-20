@@ -4,6 +4,7 @@ import (
 	"flag"
 	"log"
 
+	"github.com/joho/godotenv"
 	"github.com/pfumarola/ld-01/database"
 	"github.com/pfumarola/ld-01/database/migrate"
 	"github.com/pfumarola/ld-01/database/seed"
@@ -12,6 +13,8 @@ import (
 )
 
 func main() {
+
+	godotenv.Load()
 
 	db := database.Init()
 	sqlDB, err := db.DB()

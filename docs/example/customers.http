@@ -3,9 +3,15 @@ GET http://localhost:8080/customers
 
 ###
 POST http://localhost:8080/customers
+content-type: application/json
 
 {
-  id: 5
+			"firstName": "John",
+			"lastName": "Doe",
+			"address": "123 Main St",
+		  "phoneNumber": "555-123-4567",
+			"email": "john.doe@email.com",
+			"lateDeliveryScore": 5,
 }
 
 ###

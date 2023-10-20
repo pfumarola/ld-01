@@ -42,6 +42,10 @@ func (p *TransactionsController) DeleteOneByID(c *gin.Context) {
 func (p *TransactionsController) Save(c *gin.Context) {
 	var transaction models.Transaction
 	c.Bind(&transaction)
+	/* TO DO:
+	**	- check if the book is available
+	**	-	decrese the book available quantity
+	 */
 	result := database.DB.Create(&transaction)
 	if result.Error != nil {
 		c.Status(http.StatusInternalServerError)
