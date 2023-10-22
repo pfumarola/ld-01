@@ -25,10 +25,10 @@ func DefineRoutes(router *gin.Engine) {
 	booksGroup := router.Group("books")
 	routes.BooksRoutes(booksGroup)
 
-	customersGroup := router.Group("customers")
-	routes.CustomersRoutes(customersGroup)
+	usersGroup := router.Group("users")
+	routes.UsersRoutes(usersGroup)
 
-	transactionsGroup := router.Group(("transactions"))
-	routes.TransactionsRoutes(transactionsGroup)
+	loansGroup := router.Group(("loans"))
+	routes.LoansRoutes(loansGroup)
 
 }

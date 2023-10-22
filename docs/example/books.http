@@ -1,10 +1,10 @@
 ###
 GET http://localhost:8080/books
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5ODA4MDk2OX0.gEZH7-9rTr_TP3UvACSnwbqojhYl70FOiHnW_2A16n8
 
 ###
 POST http://localhost:8080/books
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5ODA4MDk2OX0.gEZH7-9rTr_TP3UvACSnwbqojhYl70FOiHnW_2A16n8
 
 {
   id: 5
@@ -12,11 +12,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVt
 
 ###
 GET http://localhost:8080/books/1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5ODA4MDk2OX0.gEZH7-9rTr_TP3UvACSnwbqojhYl70FOiHnW_2A16n8
 
 ###
 PUT http://localhost:8080/books/5
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5ODA4MDk2OX0.gEZH7-9rTr_TP3UvACSnwbqojhYl70FOiHnW_2A16n8
 
 {
   name: "dsa"
@@ -24,4 +24,4 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVt
 
 ###
 DELETE http://localhost:8080/books/5
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5ODA4MDk2OX0.gEZH7-9rTr_TP3UvACSnwbqojhYl70FOiHnW_2A16n8

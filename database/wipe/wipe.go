@@ -12,8 +12,8 @@ func Run(db *gorm.DB) {
 	db.Migrator().DropTable(
 		&models.Author{},
 		&models.Book{},
-		&models.Customer{},
-		&models.Transaction{},
+		&models.User{},
+		&models.Loan{},
 	)
 	log.Println("Done.")
 }

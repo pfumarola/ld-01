@@ -8,41 +8,41 @@ import (
 	"github.com/pfumarola/ld-01/database/models"
 )
 
-type CustomersController struct{}
+type UsersController struct{}
 
-func (p *CustomersController) FindAll(c *gin.Context) {
-	var customers []models.Customer
-	database.DB.Find(&customers)
-	c.JSON(http.StatusOK, customers)
+func (p *UsersController) FindAll(c *gin.Context) {
+	var users []models.User
+	database.DB.Find(&users)
+	c.JSON(http.StatusOK, users)
 	return
 }
 
-func (p *CustomersController) FindOneByID(c *gin.Context) {
-	var customer models.Customer
+func (p *UsersController) FindOneByID(c *gin.Context) {
+	var user models.User
 	id := c.Param("id")
-	database.DB.Find(&customer, id)
-	c.JSON(http.StatusOK, customer)
+	database.DB.Find(&user, id)
+	c.JSON(http.StatusOK, user)
 	return
 }
 
-func (p *CustomersController) Update(c *gin.Context) {
+func (p *UsersController) Update(c *gin.Context) {
 	//id := c.Param("id")
 	c.JSON(http.StatusOK, gin.H{"message": "Not implemented"})
 	return
 }
 
-func (p *CustomersController) DeleteOneByID(c *gin.Context) {
-	var customer models.Customer
+func (p *UsersController) DeleteOneByID(c *gin.Context) {
+	var user models.User
 	id := c.Param("id")
-	database.DB.Delete(&customer, id)
+	database.DB.Delete(&user, id)
 	c.Status(http.StatusOK)
 	return
 }
 
-func (p *CustomersController) Save(c *gin.Context) {
-	var customer models.Customer
-	c.Bind(&customer)
-	result := database.DB.Create(&customer)
+func (p *UsersController) Save(c *gin.Context) {
+	var user models.User
+	c.Bind(&user)
+	result := database.DB.Create(&user)
 	if result.Error != nil {
 		c.Status(http.StatusInternalServerError)
 		return

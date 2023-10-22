@@ -14,7 +14,7 @@ func Run(db *gorm.DB) {
 
 	seedBooks(db)
 
-	seedCustomers(db)
+	seedUsers(db)
 
 	log.Println("Done.")
 

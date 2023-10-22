@@ -5,17 +5,17 @@ import (
 	"github.com/pfumarola/ld-01/controllers"
 )
 
-func TransactionsRoutes(group *gin.RouterGroup) {
-	transactions := new(controllers.TransactionsController)
+func LoansRoutes(group *gin.RouterGroup) {
+	loans := new(controllers.LoansController)
 
-	group.GET("/", transactions.FindAll)
+	group.GET("/", loans.FindAll)
 
-	group.GET("/:id", transactions.FindOneByID)
+	group.GET("/:id", loans.FindOneByID)
 
-	group.PUT("/:id", transactions.Update)
+	group.PUT("/:id", loans.Update)
 
-	group.DELETE("/:id", transactions.DeleteOneByID)
+	group.DELETE("/:id", loans.DeleteOneByID)
 
-	group.POST("/", transactions.Save)
+	group.POST("/", loans.Save)
 
 }

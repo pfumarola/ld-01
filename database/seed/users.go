@@ -5,17 +5,18 @@ import (
 	"gorm.io/gorm"
 )
 
-func seedCustomers(db *gorm.DB) {
-	db.Create(customers)
+func seedUsers(db *gorm.DB) {
+	db.Create(users)
 }
 
-var customers = []models.Customer{
+var users = []models.User{
 	{
 		FirstName: "John",
 		LastName:  "Doe",
 		Address:   "123 Main St",
 		Phone:     "555-123-4567",
 		Email:     "john.doe@email.com",
+		IsAdmin:   false,
 	},
 	{
 		FirstName: "Jane",
@@ -23,6 +24,7 @@ var customers = []models.Customer{
 		Address:   "456 Elm St",
 		Phone:     "555-987-6543",
 		Email:     "jane.smith@email.com",
+		IsAdmin:   false,
 	},
 	{
 		FirstName: "Alice",
@@ -30,6 +32,7 @@ var customers = []models.Customer{
 		Address:   "789 Oak St",
 		Phone:     "555-555-5555",
 		Email:     "alice.johnson@email.com",
+		IsAdmin:   false,
 	},
 	{
 		FirstName: "Bob",
@@ -37,6 +40,7 @@ var customers = []models.Customer{
 		Address:   "101 Pine St",
 		Phone:     "555-222-3333",
 		Email:     "bob.brown@email.com",
+		IsAdmin:   false,
 	},
 	{
 		FirstName: "Eve",
@@ -44,5 +48,6 @@ var customers = []models.Customer{
 		Address:   "222 Cedar St",
 		Phone:     "555-888-9999",
 		Email:     "eve.wilson@email.com",
+		IsAdmin:   false,
 	},
 }

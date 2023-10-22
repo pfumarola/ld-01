@@ -27,15 +27,15 @@ func (l *LoginController) Run(c *gin.Context) {
 		return
 	}
 
-	var customer models.Customer
-	database.DB.Where("email = ?", loginCredentials.Email).Find(&customer)
+	var user models.User
+	database.DB.Where("email = ?", loginCredentials.Email).Find(&user)
 
-	if customer.CustomerID == 0 {
+	if user.UserID == 0 {
 		c.JSON(http.StatusNotFound, gin.H{"msg": "User not found"})
 		return
 	}
 
-	err := bcrypt.CompareHashAndPassword([]byte(customer.PasswordHash), []byte(loginCredentials.Password))
+	err := bcrypt.CompareHashAndPassword([]byte(user.PasswordHash), []byte(loginCredentials.Password))
 	if err != nil {
 		if err == bcrypt.ErrMismatchedHashAndPassword {
 			// Passwords doesn't match
