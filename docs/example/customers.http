@@ -1,8 +1,10 @@
 ###
 GET http://localhost:8080/customers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.gaYjFmySJtByvhzHbfd_HI0u1T-U-JyPvp-wz--7XZY
 
 ###
 POST http://localhost:8080/customers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
 content-type: application/json
 
 {
@@ -16,9 +18,11 @@ content-type: application/json
 
 ###
 GET http://localhost:8080/customers/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
 
 ###
 PUT http://localhost:8080/customers/5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
 
 {
   name: "dsa"
@@ -26,3 +30,4 @@ PUT http://localhost:8080/customers/5
 
 ###
 DELETE http://localhost:8080/customers/5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M

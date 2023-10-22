@@ -1,8 +1,10 @@
 ###
 GET http://localhost:8080/books
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
 
 ###
 POST http://localhost:8080/books
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
 
 {
   id: 5
@@ -10,9 +12,11 @@ POST http://localhost:8080/books
 
 ###
 GET http://localhost:8080/books/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
 
 ###
 PUT http://localhost:8080/books/5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
 
 {
   name: "dsa"
@@ -20,3 +24,4 @@ PUT http://localhost:8080/books/5
 
 ###
 DELETE http://localhost:8080/books/5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImV4cCI6MTY5Nzg5ODQwNn0.CrzabcO2Gs3-wXg_L6EJmH28n0DyUuB9uqLwJNFJt7M
