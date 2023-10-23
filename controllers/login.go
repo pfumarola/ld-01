@@ -46,7 +46,7 @@ func (l *LoginController) Run(c *gin.Context) {
 		return
 	}
 
-	jwt, err := generateToken(loginCredentials.Email)
+	jwt, err := generateToken(user)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"msg": err.Error})
 		return
@@ -55,11 +55,11 @@ func (l *LoginController) Run(c *gin.Context) {
 	return
 }
 
-func generateToken(email string) (string, error) {
+func generateToken(user models.User) (string, error) {
 	token := jwt.New(jwt.SigningMethodHS256)
 	claims := token.Claims.(jwt.MapClaims)
 	claims["exp"] = time.Now().Add(time.Hour * 24).Unix()
-	claims["email"] = email
+	claims["user"] = user
 	jwtSecret := []byte(os.Getenv("JWTSECRET"))
 	tokenString, err := token.SignedString(jwtSecret)
 	return tokenString, err

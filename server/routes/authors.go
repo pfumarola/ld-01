@@ -3,6 +3,7 @@ package routes
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/pfumarola/ld-01/controllers"
+	"github.com/pfumarola/ld-01/middlewares"
 )
 
 func AuthorsRoutes(group *gin.RouterGroup) {
@@ -11,6 +12,8 @@ func AuthorsRoutes(group *gin.RouterGroup) {
 	group.GET("/", authors.FindAll)
 
 	group.GET("/:id", authors.FindOneByID)
+
+	group.Use(middlewares.AdminMiddleware)
 
 	group.PUT("/:id", authors.Update)
 

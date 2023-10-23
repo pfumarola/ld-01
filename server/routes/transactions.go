@@ -3,6 +3,7 @@ package routes
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/pfumarola/ld-01/controllers"
+	"github.com/pfumarola/ld-01/middlewares"
 )
 
 func LoansRoutes(group *gin.RouterGroup) {
@@ -12,10 +13,12 @@ func LoansRoutes(group *gin.RouterGroup) {
 
 	group.GET("/:id", loans.FindOneByID)
 
+	group.POST("/", loans.Save)
+
+	group.Use(middlewares.AdminMiddleware)
+
 	group.PUT("/:id", loans.Update)
 
 	group.DELETE("/:id", loans.DeleteOneByID)
-
-	group.POST("/", loans.Save)
 
 }
