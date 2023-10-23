@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"net/http"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 	"github.com/pfumarola/ld-01/database"
@@ -26,8 +27,24 @@ func (p *AuthorsController) FindOneByID(c *gin.Context) {
 }
 
 func (p *AuthorsController) Update(c *gin.Context) {
-	//id := c.Param("id")
-	c.JSON(http.StatusOK, gin.H{"message": "Not implemented"})
+	var author models.Author
+	id, atoiError := strconv.Atoi(c.Param("id"))
+	if atoiError != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"msg": "Id must be a number"})
+		return
+	}
+	bindError := c.ShouldBind(&author)
+	if bindError != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"msg": "Invalid fields, malformed request"})
+		return
+	}
+	author.AuthorID = uint(id)
+	result := database.DB.Save(&author)
+	if result.Error != nil {
+		c.Status(http.StatusInternalServerError)
+		return
+	}
+	c.Status(http.StatusOK)
 	return
 }
 
@@ -41,7 +58,11 @@ func (p *AuthorsController) DeleteOneByID(c *gin.Context) {
 
 func (p *AuthorsController) Save(c *gin.Context) {
 	var author models.Author
-	c.Bind(&author)
+	bindError := c.ShouldBind(&author)
+	if bindError != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"msg": "Invalid fields, malformed request"})
+		return
+	}
 	result := database.DB.Create(&author)
 	if result.Error != nil {
 		c.Status(http.StatusInternalServerError)

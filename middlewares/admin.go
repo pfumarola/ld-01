@@ -1,7 +1,6 @@
 package middlewares
 
 import (
-	"log"
 	"net/http"
 	"os"
 
@@ -19,7 +18,6 @@ func AdminMiddleware(c *gin.Context) {
 
 	if claims, ok := token.Claims.(jwt.MapClaims); ok {
 		if isAdmin := claims["user"].(map[string]interface{})["isAdmin"].(bool); isAdmin {
-			log.Println(isAdmin)
 			c.Next()
 			return
 		}

@@ -16,7 +16,8 @@ var users = []models.User{
 		Address:   "123 Main St",
 		Phone:     "555-123-4567",
 		Email:     "john.doe@email.com",
-		IsAdmin:   false,
+		Password:  models.HashPassword("myadminpassword"),
+		IsAdmin:   true,
 	},
 	{
 		FirstName: "Jane",
@@ -24,6 +25,7 @@ var users = []models.User{
 		Address:   "456 Elm St",
 		Phone:     "555-987-6543",
 		Email:     "jane.smith@email.com",
+		Password:  models.HashPassword("mypassword"),
 		IsAdmin:   false,
 	},
 	{
@@ -32,6 +34,7 @@ var users = []models.User{
 		Address:   "789 Oak St",
 		Phone:     "555-555-5555",
 		Email:     "alice.johnson@email.com",
+		Password:  models.HashPassword("mypassword"),
 		IsAdmin:   false,
 	},
 	{
@@ -40,6 +43,7 @@ var users = []models.User{
 		Address:   "101 Pine St",
 		Phone:     "555-222-3333",
 		Email:     "bob.brown@email.com",
+		Password:  models.HashPassword("mypassword"),
 		IsAdmin:   false,
 	},
 	{
@@ -48,6 +52,7 @@ var users = []models.User{
 		Address:   "222 Cedar St",
 		Phone:     "555-888-9999",
 		Email:     "eve.wilson@email.com",
+		Password:  models.HashPassword("mypassword"),
 		IsAdmin:   false,
 	},
 }

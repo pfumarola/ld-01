@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"log"
 	"net/http"
 	"os"
 	"time"
@@ -35,13 +36,14 @@ func (l *LoginController) Run(c *gin.Context) {
 		return
 	}
 
-	err := bcrypt.CompareHashAndPassword([]byte(user.PasswordHash), []byte(loginCredentials.Password))
+	err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(loginCredentials.Password))
 	if err != nil {
 		if err == bcrypt.ErrMismatchedHashAndPassword {
 			// Passwords doesn't match
 			c.JSON(http.StatusUnauthorized, gin.H{"msg": "Wrong password"})
 			return
 		}
+		log.Println(err.Error())
 		c.Status(http.StatusInternalServerError)
 		return
 	}
