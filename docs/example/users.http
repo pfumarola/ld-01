@@ -9,11 +9,12 @@ content-type: application/json
 
 {
 			"firstName": "John",
-			"lastName": "Doe",
+			"lastName": "Mill",
 			"address": "123 Main St",
 		  "phoneNumber": "555-123-4567",
-			"email": "john.doe@email.com",
-			"lateDeliveryScore": 5,
+			"email": "john.mill@email.com",
+			"password": "mypassword",
+			"isAdmin": false
 }
 
 ###

@@ -1,0 +1,27 @@
+version: '3'
+services:
+  go-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT}:${PORT}"
+    command: bash -c 'while !</dev/tcp/postgres-db/5432; do sleep 1; done;./main -w; ./main -m; ./main -s; ./main'
+    depends_on:
+      - postgres-db
+    networks:
+      - app-network
+
+  postgres-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: "${DBUSER}"
+      POSTGRES_PASSWORD: "${DBPASSWORD}"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+networks:
+  app-network:

@@ -42,6 +42,7 @@ func (p *UsersController) DeleteOneByID(c *gin.Context) {
 func (p *UsersController) Save(c *gin.Context) {
 	var user models.User
 	c.Bind(&user)
+	user.Password = models.HashPassword(user.Password)
 	result := database.DB.Create(&user)
 	if result.Error != nil {
 		c.Status(http.StatusInternalServerError)

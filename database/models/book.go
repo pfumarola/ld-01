@@ -7,5 +7,4 @@ type Book struct {
 	Author            Author `gorm:"references:AuthorID;constraint:OnDelete:CASCADE;"`
 	YearOfPublication string `json:"yearOfPublication" gorm:"size:4"`
 	AvailableCopies   uint   `json:"availableCopies" binding:"required"`
-	TotalCopies       uint   `json:"totalCopies" binding:"required"`
 }

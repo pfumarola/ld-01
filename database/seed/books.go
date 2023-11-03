@@ -26,7 +26,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("George", "Orwell").AuthorID,
 			YearOfPublication: "1949",
 			AvailableCopies:   15,
-			TotalCopies:       15,
 		},
 		{
 			ISBN:              "978-0061120084",
@@ -34,7 +33,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("Harper", "Lee").AuthorID,
 			YearOfPublication: "1960",
 			AvailableCopies:   12,
-			TotalCopies:       12,
 		},
 		{
 			ISBN:              "978-0141187761",
@@ -42,7 +40,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("F. Scott", "Fitzgerald").AuthorID,
 			YearOfPublication: "1925",
 			AvailableCopies:   20,
-			TotalCopies:       20,
 		},
 		{
 			ISBN:              "978-0452284234",
@@ -50,7 +47,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("George", "Orwell").AuthorID,
 			YearOfPublication: "1945",
 			AvailableCopies:   15,
-			TotalCopies:       15,
 		},
 		{
 			ISBN:              "978-0060929879",
@@ -58,7 +54,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("J.D.", "Salinger").AuthorID,
 			YearOfPublication: "1951",
 			AvailableCopies:   12,
-			TotalCopies:       12,
 		},
 		{
 			ISBN:              "978-0062315007",
@@ -66,7 +61,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("Harper", "Lee").AuthorID,
 			YearOfPublication: "2015",
 			AvailableCopies:   10,
-			TotalCopies:       10,
 		},
 		{
 			ISBN:              "978-0679764024",
@@ -74,7 +68,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("Oscar", "Wilde").AuthorID,
 			YearOfPublication: "1890",
 			AvailableCopies:   15,
-			TotalCopies:       15,
 		},
 		{
 			ISBN:              "978-0486282084",
@@ -82,7 +75,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("Bram", "Stoker").AuthorID,
 			YearOfPublication: "1897",
 			AvailableCopies:   10,
-			TotalCopies:       10,
 		},
 		{
 			ISBN:              "978-0451526342",
@@ -90,7 +82,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("Aldous", "Huxley").AuthorID,
 			YearOfPublication: "1932",
 			AvailableCopies:   20,
-			TotalCopies:       20,
 		},
 		{
 			ISBN:              "978-0060850524",
@@ -98,7 +89,6 @@ func getBooks() []models.Book {
 			AuthorID:          getAuthorByName("Ray", "Bradbury").AuthorID,
 			YearOfPublication: "1953",
 			AvailableCopies:   15,
-			TotalCopies:       15,
 		},
 	}
 	return books
